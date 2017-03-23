@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1w-8z-TAo">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="-4" y="20" width="383" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ejc-nI-JDB"/>
                                 </constraints>
@@ -28,50 +32,66 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jar-ku-OEh">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="-4" y="623" width="383" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ITq-Wt-lng"/>
                                 </constraints>
                                 <items/>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jM6-P5-QkH">
-                                <rect key="frame" x="187" y="172" width="227" height="140"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuz-Te-nFW">
-                                <rect key="frame" x="177" y="299" width="120" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuz-Te-nFW">
+                                <rect key="frame" x="111" y="364" width="53" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sM5-hF-HzU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qju-pB-69Z">
-                                <rect key="frame" x="315" y="319" width="83" height="46"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z5e-xU-umx"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vBP-t8-Az9">
+                                <rect key="frame" x="209" y="364" width="58" height="46"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vsu-om-liW">
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="46"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LSk-5w-Qxb">
+                                                <rect key="frame" x="0.0" y="0.0" width="58" height="46"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qju-pB-69Z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="46"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="Stop"/>
+                                                        <connections>
+                                                            <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z5e-xU-umx"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jM6-P5-QkH">
+                                <rect key="frame" x="154.5" y="307" width="66.5" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jar-ku-OEh" secondAttribute="bottom" id="0G6-S2-0By"/>
-                            <constraint firstItem="qju-pB-69Z" firstAttribute="height" secondItem="nuz-Te-nFW" secondAttribute="height" id="3Br-Wi-6nx"/>
                             <constraint firstItem="jM6-P5-QkH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3aB-mF-Ckd"/>
-                            <constraint firstItem="qju-pB-69Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="5Mh-27-GO6"/>
+                            <constraint firstItem="vBP-t8-Az9" firstAttribute="leading" secondItem="nuz-Te-nFW" secondAttribute="trailing" constant="45" id="Kfv-CS-oaT"/>
                             <constraint firstItem="nuz-Te-nFW" firstAttribute="top" secondItem="Z1w-8z-TAo" secondAttribute="bottom" constant="300" id="NBv-A4-mkd"/>
                             <constraint firstItem="Z1w-8z-TAo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="TED-8H-Nk9"/>
                             <constraint firstItem="jM6-P5-QkH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="THm-vW-pgG"/>
+                            <constraint firstItem="jM6-P5-QkH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xhw-Tg-oOQ"/>
                             <constraint firstItem="Z1w-8z-TAo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aEP-Am-NWR"/>
                             <constraint firstItem="jar-ku-OEh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="fSv-Zj-0cf"/>
-                            <constraint firstItem="qju-pB-69Z" firstAttribute="width" secondItem="nuz-Te-nFW" secondAttribute="width" id="kFQ-nl-U0C"/>
+                            <constraint firstItem="vBP-t8-Az9" firstAttribute="top" secondItem="nuz-Te-nFW" secondAttribute="top" id="gNJ-JC-YlJ"/>
                             <constraint firstItem="nuz-Te-nFW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="mgY-Kn-5KX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Z1w-8z-TAo" secondAttribute="trailing" constant="-20" id="nwD-Mk-1DP"/>
-                            <constraint firstItem="qju-pB-69Z" firstAttribute="top" secondItem="Z1w-8z-TAo" secondAttribute="bottom" constant="300" id="qOE-Og-1JC"/>
+                            <constraint firstItem="nuz-Te-nFW" firstAttribute="top" secondItem="jM6-P5-QkH" secondAttribute="bottom" constant="3.5" id="oy5-g8-AVY"/>
+                            <constraint firstItem="jM6-P5-QkH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p6n-ud-Iuf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jar-ku-OEh" secondAttribute="trailing" constant="-20" id="vh7-wB-8tW"/>
                         </constraints>
                     </view>

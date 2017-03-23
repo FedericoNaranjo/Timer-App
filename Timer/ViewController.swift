@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var timer = NSTimer()
+    var timer = Foundation.Timer()
     var interval = 0.01
     var currentTime = 0.0
     var go = false, hasStarted = false, running = false
@@ -21,24 +21,24 @@ class ViewController: UIViewController {
     @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var stopButton: UIButton!
 
-    @IBAction func playPause(sender: UIButton) {
+    @IBAction func playPause(_ sender: UIButton) {
         
         if(!running) {
-            timer = NSTimer.scheduledTimerWithTimeInterval(interval, target: self, selector: #selector(ViewController.increaseTime), userInfo: nil, repeats: true)
+            timer = Foundation.Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(ViewController.increaseTime), userInfo: nil, repeats: true)
             hasStarted = true
             running = true
-            sender.setTitle("Pause", forState: .Normal)
+            sender.setTitle("Pause", for: UIControlState())
         }
         else {
             timer.invalidate()
             running = false
-            sender.setTitle("Play", forState: .Normal)
+            sender.setTitle("Play", for: UIControlState())
             
         }
         
     }
 
-    @IBAction func stop(sender: UIButton) {
+    @IBAction func stop(_ sender: UIButton) {
         timer.invalidate()
         running = false
         currentTime = 0.0
